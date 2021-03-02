@@ -1,21 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://stac-extensions.github.io/template/v1.0.0/schema.json#",
-  "title": "Template Extension",
-  "description": "STAC Template Extension for STAC Items and STAC Collections.",
+  "$id": "https://stac-extensions.github.io/timestamps/v1.0.0/schema.json#",
+  "title": "Timestamps Extension",
+  "description": "STAC Timestamps Extension to a STAC Item.",
   "oneOf": [
     {
       "allOf": [
         {
-          "type": "object",
-          "required": [
-            "type"
-          ],
-          "properties": {
-            "type": {
-              "const": "Feature"
-            }
-          }
+          "$ref": "../../../item-spec/json-schema/item.json"
         },
         {
           "$ref": "#/definitions/stac_extensions"
@@ -23,11 +15,22 @@
         {
           "type": "object",
           "required": [
-            "properties"
+            "stac_extensions",
+            "properties",
+            "assets"
           ],
           "properties": {
+            "stac_extensions": {
+              "type": "array",
+              "contains": {
+                "enum": [
+                  "timestamps",
+                  "https://stac-extensions.github.io/timestamps/v1.0.0/schema.json#"
+                ]
+              }
+            },            
             "properties": {
-              "$ref": "#/definitions/template"
+              "$ref": "#/definitions/timestamps"
             }
           }
         }
