@@ -8,13 +8,14 @@
 - **Owner**: @m-mohr
 
 This document explains the fields of the Timestamps Extension to a STAC Item.
-Allows to specify numerous timestamps for assets and metadata in addition to [`created`, `updated` and `datetime` (incl. start and end)](../../item-spec/common-metadata.md#date-and-time).
+Allows to specify numerous timestamps for assets and metadata in addition to [`created`, `updated` and `datetime` (incl. start and end)](https://github.com/radiantearth/stac-spec/tree/master/item-spec/common-metadata.md#date-and-time).
 
 - Examples:
   - [Item example](examples/item.json): Shows the basic usage of the extension in a STAC Item
 - [JSON Schema](json-schema/schema.json)
 
 ## Item Properties Fields
+
 | Field Name  | Type   | Description |
 | ----------- | ------ | ----------- |
 | published   | string | Date and time the corresponding data (see below) was published the first time. |
@@ -28,6 +29,7 @@ All timestamps MUST be formatted according to [RFC 3339, section 5.6](https://to
 The timestamps have different meaning depending on where they are used.
 If those fields are available in the Item `properties`, it's referencing to the timestamps valid for of the metadata.
 Having those fields in the Item `assets` refers to the timestamps valid for the actual data linked to in the Asset Object.
+
 ### Lifecycle
 
 An overview over the lifecycle of data and their corresponding timestamps:
@@ -42,11 +44,9 @@ An overview over the lifecycle of data and their corresponding timestamps:
 8. Data valid until: `expires`
 9. Data removed / unpublished: `unpublished`
 
-## Implementations
-
-- [openEO](https://api.openeo.org) implements the `expires` field.
-
 ## Outlook
 
 Once these fields get broadly adopted, it is planned to move them to Common Metadata and place them together with `created` and `updated`.
 As this extension doesn't have a prefix, it doesn't lead to any breaking changes and the thus it is only a structural change for the specification.
+
+This fields - together with `created` and `updated` - also seem relevant for STAC Collections and may be adopted there, too.
