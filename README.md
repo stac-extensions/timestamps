@@ -6,6 +6,7 @@
 - **Scope:** Item
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @m-mohr
+- **History**: [Prior to March 2, 2021](https://github.com/radiantearth/stac-spec/commits/v1.0.0-rc.1/extensions/timestamps)
 
 This document explains the fields of the Timestamps Extension to a STAC Item.
 Allows to specify numerous timestamps for assets and metadata in addition to [`created`, `updated` and `datetime` (incl. start and end)](https://github.com/radiantearth/stac-spec/tree/master/item-spec/common-metadata.md#date-and-time).
