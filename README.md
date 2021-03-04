@@ -3,7 +3,7 @@
 - **Title:** Timestamps
 - **Identifier:** <https://stac-extensions.github.io/timestamps/v1.0.0/schema.json>
 - **Field Name Prefix:** -
-- **Scope:** Item
+- **Scope:** Item, Collection
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @m-mohr
 - **History**: [Prior to March 2, 2021](https://github.com/radiantearth/stac-spec/commits/v1.0.0-rc.1/extensions/timestamps)
@@ -23,8 +23,6 @@ Allows to specify numerous timestamps for assets and metadata in addition to [`c
 | published   | string | Date and time the corresponding data (see below) was published the first time. |
 | expires     | string | Date and time the corresponding data (see below) expires (is not valid any longer). |
 | unpublished | string | Date and time the corresponding data (see below) was unpublished. |
-
-*At least one of the fields must be specified.*
 
 All timestamps MUST be formatted according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
 
