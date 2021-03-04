@@ -13,6 +13,7 @@ Allows to specify numerous timestamps for assets and metadata in addition to [`c
 - Examples:
   - [Item example](examples/item.json): Shows the basic usage of the extension in a STAC Item
 - [JSON Schema](json-schema/schema.json)
+- [Changelog](./CHANGELOG.md)
 
 ## Item Properties Fields
 
