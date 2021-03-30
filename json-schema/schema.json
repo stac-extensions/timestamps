@@ -59,6 +59,9 @@
               }
             }
           }
+        },
+        {
+          "$ref": "#/definitions/stac_extensions"
         }
       ]
     }

@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Clarified scope 
 - Clarified that no field is required, which is also not enforced in the schema
+- JSON Schema checks `stac_extensions` field in Collections
 
 ## [v1.0.0] - 2021-03-04
 
