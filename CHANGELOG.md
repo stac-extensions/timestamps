@@ -6,10 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
 ### Fixed
 
-- Clarified Scope 
-- Clarified that no field id required, which is also not enforced in the schema
+- Clarified scope 
+- Clarified that no field is required, which is also not enforced in the schema
 
 ## [v1.0.0] - 2021-03-04
 
