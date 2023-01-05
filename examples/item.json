@@ -1,5 +1,5 @@
 {
-  "stac_version": "1.0.0-rc.1",
+  "stac_version": "1.0.0",
   "stac_extensions": [
     "https://stac-extensions.github.io/timestamps/v1.0.0/schema.json"
   ],
@@ -75,14 +75,16 @@
       "title": "Thumbnail image",
       "type": "image/jpeg",
       "created": "2018-10-02T00:00:01Z"
-    },
-    "index": {
+    }
+  },
+  "links": [
+    {
       "href": "https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC08_L1TP_107018_20181001_20181001_01_RT/index.html",
+      "rel": "alternate",
       "type": "text/html",
       "title": "HTML index page",
       "created": "2018-10-02T00:00:02Z",
       "updated": "2020-05-20T12:13:01Z"
     }
-  },
-  "links": []
+  ]
 }

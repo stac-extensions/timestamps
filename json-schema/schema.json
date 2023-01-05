@@ -12,7 +12,8 @@
           "required": [
             "type",
             "properties",
-            "assets"
+            "assets",
+            "links"
           ],
           "properties": {
             "type": {
@@ -22,10 +23,10 @@
               "$ref": "#/definitions/fields"
             },
             "assets": {
-              "type": "object",
-              "additionalProperties": {
-                "$ref": "#/definitions/fields"
-              }
+              "$ref": "#/definitions/assets"
+            },
+            "links": {
+              "$ref": "#/definitions/links"
             }
           }
         },
@@ -47,18 +48,43 @@
               "const": "Collection"
             },
             "assets": {
-              "type": "object",
-              "additionalProperties": {
-                "$ref": "#/definitions/fields"
-              }
+              "$ref": "#/definitions/assets"
             },
             "item_assets": {
-              "type": "object",
-              "additionalProperties": {
-                "$ref": "#/definitions/fields"
-              }
+              "$ref": "#/definitions/assets"
+            },
+            "links": {
+              "$ref": "#/definitions/links"
             }
           }
+        },
+        {
+          "$ref": "#/definitions/fields"
+        },
+        {
+          "$ref": "#/definitions/stac_extensions"
+        }
+      ]
+    },
+    {
+      "$comment": "This is the schema for STAC Catalogs.",
+      "allOf": [
+        {
+          "type": "object",
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "const": "Catalog"
+            },
+            "links": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        {
+          "$ref": "#/definitions/fields"
         },
         {
           "$ref": "#/definitions/stac_extensions"
@@ -79,6 +105,18 @@
             "const": "https://stac-extensions.github.io/timestamps/v1.0.0/schema.json"
           }
         }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/fields"
+      }
+    },
+    "assets": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/fields"
       }
     },
     "fields": {

@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - All timestamps must be in UTC ([#1095](https://github.com/radiantearth/stac-spec/issues/1095))
+- The extension can now be used mostly everywhere (e.g. Catalog, Collections, Items, Assets, Links), which aligns with STAC common metadata.
 
 ### Deprecated
 

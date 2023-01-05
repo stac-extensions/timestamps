@@ -1,0 +1,46 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/timestamps/v1.0.0/schema.json"
+  ],
+  "id": "landsat-8",
+  "type": "Collection",
+  "title": "Example L8",
+  "description": "An example collection...",
+  "created": "2009-05-20T02:40:01.042784Z",
+  "updated": "2022-11-03T23:59:55.112875Z",
+  "published": "2009-05-20T02:40:01.042784Z",
+  "links": [
+    {
+      "rel": "item",
+      "href": "item.json",
+      "title": "Example Item",
+      "datetime": "2018-10-01T01:08:32Z",
+      "created": "2018-10-02T00:00:03Z",
+      "updated": "2020-05-20T12:13:02Z",
+      "published": "2018-10-03T06:45:55Z",
+      "expires": "2025-01-01T00:00:00Z"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -56,
+          180,
+          83
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2009-05-20T02:40:01.042784Z",
+          "2022-11-03T23:59:55.112875Z"
+        ]
+      ]
+    }
+  },
+  "license": "PDDL-1.0"
+}
