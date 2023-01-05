@@ -1,9 +1,9 @@
 # Timestamps Extension Specification
 
 - **Title:** Timestamps
-- **Identifier:** <https://stac-extensions.github.io/timestamps/v1.0.0/schema.json>
+- **Identifier:** <https://stac-extensions.github.io/timestamps/v1.1.0/schema.json>
 - **Field Name Prefix:** -
-- **Scope:** Item, Collection
+- **Scope:** Item, Catalog, Collection
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Pilot
 - **Owner**: @m-mohr
 - **History**: [Prior to March 2, 2021](https://github.com/radiantearth/stac-spec/commits/v1.0.0-rc.1/extensions/timestamps)
