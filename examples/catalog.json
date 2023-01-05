@@ -1,0 +1,23 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/timestamps/v1.0.0/schema.json"
+  ],
+  "id": "landsat-8",
+  "type": "Catalog",
+  "title": "Example L8",
+  "description": "An example catalog...",
+  "created": "2018-10-02T00:00:03Z",
+  "updated": "2020-05-20T12:13:02Z",
+  "published": "2018-10-03T06:45:55Z",
+  "expires": "2025-01-01T00:00:00Z",
+  "links": [
+    {
+      "href": "https://example.com",
+      "rel": "about",
+      "type": "text/html",
+      "title": "Homepage",
+      "updated": "2020-05-20T12:13:01Z"
+    }
+  ]
+}

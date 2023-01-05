@@ -8,15 +8,24 @@
 - **Owner**: @m-mohr
 - **History**: [Prior to March 2, 2021](https://github.com/radiantearth/stac-spec/commits/v1.0.0-rc.1/extensions/timestamps)
 
-This document explains the fields of the Timestamps Extension to a STAC Item.
+This document explains the fields of the Timestamps Extension to all STAC entities.
 Allows to specify numerous timestamps for assets and metadata in addition to [`created`, `updated` and `datetime` (incl. start and end)](https://github.com/radiantearth/stac-spec/tree/master/item-spec/common-metadata.md#date-and-time).
 
 - Examples:
-  - [Item example](examples/item.json): Shows the basic usage of the extension in a STAC Item
+  - [Catalog example](examples/catalog.json)
+  - [Collection example](examples/collection.json)
+  - [Item example](examples/item.json)
 - [JSON Schema](json-schema/schema.json)
 - [Changelog](./CHANGELOG.md)
 
-## Item Properties Fields
+## Fields
+
+The fields in the table below can be used in these parts of STAC documents:
+- [x] Catalogs
+- [x] Collections
+- [x] Item Properties (incl. Summaries in Collections)
+- [x] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
+- [x] Links
 
 | Field Name  | Type   | Description |
 | ----------- | ------ | ----------- |
@@ -26,9 +35,10 @@ Allows to specify numerous timestamps for assets and metadata in addition to [`c
 
 All timestamps MUST be formatted according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
 
-The timestamps have different meaning depending on where they are used.
-If those fields are available in the Item `properties`, it's referencing to the timestamps valid for of the metadata.
-Having those fields in the Item `assets` refers to the timestamps valid for the actual data linked to in the Asset Object.
+**NOTE:** The timestamps have different meaning depending on where they are used.
+If those fields are available in a Collection, in a Catalog (both top-level), or in a Item (in the `properties`),
+the fields refer the metadata (e.g., when the STAC metadata was published).
+Having those fields in the Assets or Links, they refer to the actual data linked to (e.g., when the asset was published).
 
 ### Lifecycle
 
@@ -43,13 +53,6 @@ An overview over the lifecycle of data and their corresponding timestamps:
 7. Data last published: N/A
 8. Data valid until: `expires`
 9. Data removed / unpublished: `unpublished`
-
-## Outlook
-
-Once these fields get broadly adopted, it is planned to move them to Common Metadata and place them together with `created` and `updated`.
-As this extension doesn't have a prefix, it doesn't lead to any breaking changes and the thus it is only a structural change for the specification.
-
-This fields - together with `created` and `updated` - also seem relevant for STAC Collections and may be adopted there, too.
 
 ## Contributing
 
