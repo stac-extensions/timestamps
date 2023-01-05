@@ -20,9 +20,9 @@ Allows to specify numerous timestamps for assets and metadata in addition to [`c
 
 | Field Name  | Type   | Description |
 | ----------- | ------ | ----------- |
-| published   | string | Date and time the corresponding data (see below) was published the first time. |
-| expires     | string | Date and time the corresponding data (see below) expires (is not valid any longer). |
-| unpublished | string | Date and time the corresponding data (see below) was unpublished. |
+| published   | string | Date and time the corresponding data (see below) was published the first time, in UTC. |
+| expires     | string | Date and time the corresponding data (see below) expires (is not valid any longer), in UTC. |
+| unpublished | string | Date and time the corresponding data (see below) was unpublished, in UTC. |
 
 All timestamps MUST be formatted according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
 

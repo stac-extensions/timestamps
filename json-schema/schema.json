@@ -87,17 +87,20 @@
         "published": {
           "title": "Publish Time",
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "pattern": "(\\+00:00|Z)$"
         },
         "unpublished": {
           "title": "Removal Time",
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "pattern": "(\\+00:00|Z)$"
         },
         "expires": {
           "title": "Expiry Time",
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "pattern": "(\\+00:00|Z)$"
         }
       }
     }
